@@ -13,10 +13,10 @@ int main(){
 
     //var. locali
     int corretto = 0; //lunghezza
-    char pw[dim]; //massimo 10 carr.
+    unsigned char pw[dim]; //massimo 10 carr.
     int flag_up; //flag di controllo se esistono i numero
     int flag_num; //flag di controllo se esistono car maiuscoli
-    int flag; //controllo di ripetizione una volta che la pw è stata sbaglieta
+    int flag; //controllo di ripetizione una volta che la pw Ã¨ stata sbaglieta
     int i;
 
 
@@ -29,15 +29,15 @@ int main(){
 
         if(strlen(pw) <= dim){ //se la lunghezza non supera i 10 caratteri, allora effettuo i controlli
 
-            flag = 1; //la condizione è vera
+            flag = 1; //la condizione Ã¨ vera
 
             //inizializzo i flag ad ogni iterazione
             flag_up = 0;
             flag_num = 0;
 
             for(i = 0; i < dim; i++){
-                flag_num += isdigit(pw[i]); //controlla ogni carattere se contiene un numero, in tal caso la funzione restituirà 1
-                flag_up += isupper(pw[i]); //controlla ogni carattere se esiste la maiuscola, in tal caso la funzione restituirà 1
+                flag_num += isdigit(pw[i]); //controlla ogni carattere se contiene un numero, in tal caso la funzione restituirÃ  1
+                flag_up += isupper(pw[i]); //controlla ogni carattere se esiste la maiuscola, in tal caso la funzione restituirÃ  1
 
                 //blocca il ciclo nel caso in cui sono stati trovati il carr. maiuscolo e il numero
                 if((flag_num == 1)&&(flag_up == 1)){
